@@ -1,0 +1,17 @@
+.first
+{
+    width:1200px;
+    height: 200px;
+    background-color: orange;
+}
+.myerro
+{
+    background-color: red;
+    color:white;
+    padding:50px;
+}
+.code-page
+{
+    height: 200px;
+    background-color: aqua;
+}

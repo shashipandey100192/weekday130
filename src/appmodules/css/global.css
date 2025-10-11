@@ -1,0 +1,10 @@
+.appmenu a
+{
+    text-decoration: none;
+    text-align: center;
+   
+}
+.appmenu .card
+{
+    min-height: 100px;
+}

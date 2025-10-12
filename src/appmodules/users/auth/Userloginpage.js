@@ -1,6 +1,8 @@
 import React from 'react'
 import { MdOutlineMailOutline } from "react-icons/md";
 import { RiLockPasswordLine } from "react-icons/ri";
+import { FaUser } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 
 function Userloginpage() {
@@ -11,8 +13,8 @@ function Userloginpage() {
                    
                     <div className='container-fluid'>
                         <div className='row'>
-                            <div className='col-12'>
-                                <p className='cususer border'> icons</p>
+                            <div className='col-12 text-center'>
+                                <p className='cususer'><FaUser/></p>
                             </div>
                              <div className='col-12 text-center'>
                                 <p className='h4 pb-5'>App Login Page</p>
@@ -33,6 +35,7 @@ function Userloginpage() {
                                 <div className="mb-3">
                                    
                                     <input type='button' value="login" className='btn btn-success'/>
+                                    <Link to="registor" className='ms-3'>new registor</Link>
                                 </div>
                             </div>
                         </div>

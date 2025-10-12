@@ -6,6 +6,8 @@ import "bootstrap/dist/js/bootstrap.bundle.js";
 import "./appmodules/css/global.css";
 import Welcomepage from './Welcomepage';
 import Userloginpage from './appmodules/users/auth/Userloginpage';
+import Userregistor from './appmodules/users/auth/Userregistor';
+import Usermainpage from './appmodules/users/dashboard/Usermainpage';
 
 
 
@@ -18,6 +20,10 @@ root.render(
       <Routes>
         <Route path='' element={<Welcomepage/>}></Route>
         <Route path='usermanagement' element={<Userloginpage/>}/>
+        <Route path='/usermanagement/registor' element={<Userregistor/>}/>
+        <Route path='dashboard' element={<Usermainpage/>}>
+        
+        </Route>
 
 
       </Routes>

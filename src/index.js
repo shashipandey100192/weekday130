@@ -8,6 +8,10 @@ import Welcomepage from './Welcomepage';
 import Userloginpage from './appmodules/users/auth/Userloginpage';
 import Userregistor from './appmodules/users/auth/Userregistor';
 import Usermainpage from './appmodules/users/dashboard/Usermainpage';
+import UserHomepage from './appmodules/users/dashboard/UserHomepage';
+import UserListpage from './appmodules/users/dashboard/UserListpage';
+import Apipage from './appmodules/users/dashboard/Apipage';
+import Apperror from './appmodules/sharecomponents/Apperror';
 
 
 
@@ -22,8 +26,14 @@ root.render(
         <Route path='usermanagement' element={<Userloginpage/>}/>
         <Route path='/usermanagement/registor' element={<Userregistor/>}/>
         <Route path='dashboard' element={<Usermainpage/>}>
-        
+            <Route path="" element={<UserHomepage/>}></Route>
+            <Route path="userlist" element={<UserListpage/>}></Route>
+            <Route path="api" element={<Apipage/>}></Route>
+            <Route path="*" element={<Apperror/>}></Route>
+
         </Route>
+         <Route path="*" element={<Apperror/>}></Route>
+
 
 
       </Routes>

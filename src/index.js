@@ -12,6 +12,7 @@ import UserHomepage from './appmodules/users/dashboard/UserHomepage';
 import UserListpage from './appmodules/users/dashboard/UserListpage';
 import Apipage from './appmodules/users/dashboard/Apipage';
 import Apperror from './appmodules/sharecomponents/Apperror';
+import Productdetails from './appmodules/users/dashboard/Productdetails';
 
 
 
@@ -29,6 +30,7 @@ root.render(
             <Route path="" element={<UserHomepage/>}></Route>
             <Route path="userlist" element={<UserListpage/>}></Route>
             <Route path="api" element={<Apipage/>}></Route>
+            <Route path="api/detailspage/:id" element={<Productdetails/>}></Route>
             <Route path="*" element={<Apperror/>}></Route>
 
         </Route>

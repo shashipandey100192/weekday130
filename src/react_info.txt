@@ -1,0 +1,6 @@
+1) react input, form validation
+	1) custom validation
+	2) lib (react-hook-form)
+		1) npm install react-hook-form
+		2) import 
+		3) inject 

@@ -4,3 +4,11 @@
 		1) npm install react-hook-form
 		2) import 
 		3) inject 
+----------------------
+2) message / notification(react-toastify)
+	1)  npm install react-toastify
+	2) import {toast,ToastContainer} from 'react-toastify'
+	3) inject
+NOte: default timeout 5000ms
+Note: succes,danger,info
+3) 

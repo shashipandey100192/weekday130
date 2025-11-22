@@ -1,17 +1,26 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { MdOutlineMailOutline } from "react-icons/md";
 import { RiLockPasswordLine } from "react-icons/ri";
 import { FaUser } from "react-icons/fa";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useForm } from "react-hook-form"
+import {toast,ToastContainer} from 'react-toastify'
 
 
 function Userloginpage() {
+    const mynav = useNavigate();
 
 const {register,handleSubmit,formState: { errors }} = useForm();
 
 const myform = (d)=>{
     console.log(d);
+
+    toast.success("welcome to",{autoClose:1000,position:"top-left",theme:"dark"});
+
+    setTimeout(()=>{
+        mynav('/dashboard');
+    },1000);
+
 }
 
 
@@ -27,7 +36,8 @@ const myform = (d)=>{
                                 <p className='cususer'><FaUser/></p>
                             </div>
                              <div className='col-12 text-center'>
-                                <p className='h4 pb-5'>App Login Page</p>
+                                <ToastContainer />                         
+                             <p className='h4 pb-5'>App Login Page</p>
                             </div>
                             <div className='col-md-12'>
                                 <div className="mb-3">

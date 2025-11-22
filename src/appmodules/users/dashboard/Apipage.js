@@ -7,7 +7,7 @@ function Apipage() {
   const [items, setItems] = useState([])
 
   const myapidata = () => {
-    axios.get('https://dummyjson.com/products').then((d) => {
+    axios.get('https://dummyjson.com/products?limit=10').then((d) => {
       console.log(d.data.products);
       setItems(d.data.products);
     })

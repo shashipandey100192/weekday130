@@ -4,6 +4,11 @@
 		1) npm install react-hook-form
 		2) import 
 		3) inject 
+		4) form validation ( formState: { errors })
+			1) validation with single message
+				
+			2) validation with multi message 
+
 ----------------------
 2) message / notification(react-toastify)
 	1)  npm install react-toastify
@@ -11,4 +16,14 @@
 	3) inject
 NOte: default timeout 5000ms
 Note: succes,danger,info
-3) 
+3) data passing
+	1) props
+		a) props driling
+	2) context Api
+	3) storage
+	4) redux 
+4) client side pdf generate  (html2pdf.js)
+	1) npm install html2pdf.js
+	2) import 
+	
+

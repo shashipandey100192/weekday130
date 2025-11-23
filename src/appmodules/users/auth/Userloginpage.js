@@ -49,8 +49,11 @@ const myform = (d)=>{
                              <div className='col-md-12'>
                                 <div className="mb-3">
                                     <label className="form-label"> <RiLockPasswordLine/> Password</label>
-                                    <input type="password" className="form-control" {...register("pass",{required:true})}/>
-                                     {errors.pass && <p className='text-danger'> password is required</p>}
+                                    <input type="password" className="form-control" {...register("pass",{required:true,minLength:5,maxLength:10})}/>
+                                     {/* {errors.pass && <p className='text-danger'> password is required</p>} */}
+                                     {errors.pass?.type==="required" && <p className='text-danger'>password is required</p>}
+                                     {errors.pass?.type==="minLength" && <p className='text-info'>required minimum 5 charectors</p>}
+                                     {errors.pass?.type==="maxLength" && <p className='text-warning'>password maximun 10 charectors</p>}
                                 </div>
                             </div>
                              <div className='col-md-12 text-center'>

@@ -22,9 +22,9 @@ function Apipage() {
       <div className='row'>
         {items.map((e) => {
           return (
-            <div className='col-md-3 mt-2'>
+            <div className='col-md-3 mt-2 d-print-block'>
               <div className='card p-2 shadow'>
-                <img src={e.thumbnail} alt={e.id}/>
+                <img src={e.thumbnail} alt={e.id} className='d-print-block'/>
                 <h1>Id:{e.id}</h1>
                 <h3>title:{e.category}</h3>
                 <p>Description:{e.description}</p>

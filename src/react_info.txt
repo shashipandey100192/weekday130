@@ -24,6 +24,26 @@ Note: succes,danger,info
 	4) redux 
 4) client side pdf generate  (html2pdf.js)
 	1) npm install html2pdf.js
-	2) import 
+	2) import html2pdf from 'html2pdf.js';
+	3) pass ref area to print 
+	4) build function to print 
+------------------------------------
+5) local storage 
+	1) setItem()
+	2) getItem()
+	3) removeItem()
+	4) clear()
+6) json server (work on local)
+	1) install
+		npm install -g jsonserver
+	2) create file
+		database.json
+	3) run json server
+		npx json-server --watch database.json
+		npx json-server --watch database.json --port 8700
+
+			
+	
+	
 	
 

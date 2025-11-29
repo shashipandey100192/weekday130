@@ -76,14 +76,7 @@ const handleConvert = () => {
           </div>
         </div>
 
-        <div className='col-md-12 mt-3'>
-          <div class="card bg-light shadow">
-            <div class="card-body">
-                <Apipage></Apipage>
-            </div>
-          </div>
-        </div>
-
+        
 
       </div>
     </div>

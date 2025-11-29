@@ -2,10 +2,33 @@ import React from 'react'
 import { MdOutlineMailOutline } from "react-icons/md";
 import { RiLockPasswordLine } from "react-icons/ri";
 import { FaUser } from "react-icons/fa";
-import { Link } from 'react-router-dom';
+import { Link ,useNavigate} from 'react-router-dom';
+import axios from 'axios';
+import { useForm } from 'react-hook-form';
+import {toast,ToastContainer} from 'react-toastify'
+
+
 
 function Userregistor() {
+  const mynav = useNavigate();
+  const {register,handleSubmit,formState: { errors }} = useForm();
+
+const myform = (d)=>{
+    axios.post("http://localhost:8700/students",d).then((e)=>{
+      console.log(e);
+    toast.success("welcome to",{autoClose:1000,position:"top-left",theme:"dark"});
+
+    setTimeout(()=>{
+        mynav('/usermanagement');
+    },1000);
+    })
+
+}
+
+
+
   return (
+    <form onSubmit={handleSubmit(myform)}>
     <div className='container'>
       <div className='row justify-content-center'>
         <div className='col-md-8 bg-light shadow p-5'>
@@ -21,19 +44,23 @@ function Userregistor() {
               <div className='col-md-6'>
                 <div className="mb-3">
                   <label className="form-label"> <MdOutlineMailOutline /> Email address</label>
-                  <input type="email" className="form-control" />
+                  <input type="email" className="form-control" {...register("email",{required:true})} />
+                  {errors.email && <p className='text-danger'> email is required</p>}
                 </div>
               </div>
               <div className='col-md-6'>
                 <div className="mb-3">
                   <label className="form-label"> <RiLockPasswordLine /> Password</label>
-                  <input type="password" className="form-control" />
+                  <input type="password" className="form-control" {...register("pass",{required:true})}/>
+                  {errors.pass && <p className='text-danger'> password is required</p>}
                 </div>
               </div>
               <div className='col-md-6'>
                 <div className="mb-3">
                   <label className="form-label"> <RiLockPasswordLine />DOB</label>
-                  <input type="date" className="form-control" />
+                  <input type="date" className="form-control" {...register("dob",{required:true})}/>
+                  {errors.dob && <p className='text-danger'> date of birth is required</p>}
+                  <ToastContainer/>
                 </div>
               </div>
               <div className='col-md-6'>
@@ -66,7 +93,7 @@ function Userregistor() {
               <div className='col-md-6 text-center'>
                 <div className="mb-3">
 
-                  <input type='button' value="Registor now" className='btn btn-success' />
+                  <input type='submit' value="Registor now" className='btn btn-success' />
                   <Link to="/usermanagement" className='ms-3'>Login</Link>
                 </div>
               </div>
@@ -75,6 +102,7 @@ function Userregistor() {
         </div>
       </div>
     </div>
+    </form>
   )
 }
 

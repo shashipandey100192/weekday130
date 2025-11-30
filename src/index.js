@@ -15,6 +15,8 @@ import Apperror from './appmodules/sharecomponents/Apperror';
 import Productdetails from './appmodules/users/dashboard/Productdetails';
 import Graphpage from './appmodules/users/dashboard/Graphpage';
 import Parentspage from './appmodules/users/dashboard/propspage/Parentspage';
+import Userlist from './appmodules/users/dashboard/Userlist';
+import Editpage from './appmodules/users/dashboard/Editpage';
 
 
 
@@ -35,7 +37,8 @@ root.render(
             <Route path="api/detailspage/:id" element={<Productdetails/>}></Route>
             <Route path="graph" element={<Graphpage/>}></Route>
             <Route path="props" element={<Parentspage/>}></Route>
-            
+            <Route path='jsondata' element={<Userlist/>}></Route>
+            <Route path='jsondata/edit/:id' element={<Editpage/>}></Route>
             <Route path="*" element={<Apperror/>}></Route>
 
         </Route>

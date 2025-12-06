@@ -41,6 +41,31 @@ Note: succes,danger,info
 	3) run json server
 		npx json-server --watch database.json
 		npx json-server --watch database.json --port 8700
+--------------------------------------------------------
+7) redux
+	1) install
+		npm install @reduxjs/toolkit react-redux
+	2) create store (configureStore)
+	3) wrap store with application 
+	4) create slicer(function, actions)
+	5) store in storage
+	6) select int stat value 
+		useSelector()
+		
+		
+		
+
+--------------------------
+	configureStore
+	reducer
+	Provider
+	store
+	createSlice
+	useSelector/useDispatch
+	dispatch 
+	actions
+	state
+----------------------
 
 			
 	

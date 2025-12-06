@@ -2,9 +2,9 @@
   "students": [
     {
       "id": "8dd9",
-      "email": "admin@gmail.com",
-      "pass": "123456",
-      "dob": "2025-11-12"
+      "email": "admin@gmail.comdf",
+      "pass": "123456df",
+      "dob": "2025-11-20"
     },
     {
       "id": "8758",
@@ -14,15 +14,9 @@
     },
     {
       "id": "264c",
-      "email": "moan@gmaillcom",
-      "pass": "99999",
-      "dob": "2025-12-02"
-    },
-    {
-      "id": "e248",
-      "email": "rohit@gmail.com",
-      "pass": "6666666",
-      "dob": "2025-11-25"
+      "email": "moan@gmaillcomw",
+      "pass": "999990",
+      "dob": "2025-12-24"
     }
   ]
 }

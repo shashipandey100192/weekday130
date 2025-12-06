@@ -17,6 +17,8 @@ import Graphpage from './appmodules/users/dashboard/Graphpage';
 import Parentspage from './appmodules/users/dashboard/propspage/Parentspage';
 import Userlist from './appmodules/users/dashboard/Userlist';
 import Editpage from './appmodules/users/dashboard/Editpage';
+import { Provider } from 'react-redux';
+import { myactionstore } from './appmodules/redux/Mystore';
 
 
 
@@ -24,7 +26,9 @@ import Editpage from './appmodules/users/dashboard/Editpage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+
   <React.StrictMode>
+      <Provider store={myactionstore}>
     <BrowserRouter>
       <Routes>
         <Route path='' element={<Welcomepage/>}></Route>
@@ -43,12 +47,9 @@ root.render(
 
         </Route>
          <Route path="*" element={<Apperror/>}></Route>
-
-
-
       </Routes>
     </BrowserRouter>
-   
+   </Provider>
 
   </React.StrictMode>
 );
